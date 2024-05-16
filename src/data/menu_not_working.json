@@ -1,0 +1,38 @@
+{
+    "title": "Administrativo",
+    "icon": "home",
+    "type": "sub",
+    "active": false,
+    "children": [
+      {
+        "path": "/",
+        "title": "Usuarios",
+        "type": "link"
+      },
+      {
+        "path": "/",
+        "title": "Médicos",
+        "type": "link"
+      },
+      {
+        "path": "/",
+        "title": "Enfermeras",
+        "type": "link"
+      },
+      {
+        "path": "/",
+        "title": "Reporte de pagos",
+        "type": "link"
+      },
+      {
+        "path": "/",
+        "title": "Alta de paciente",
+        "type": "link"
+      },
+      {
+        "path": "/",
+        "title": "Inventarios",
+        "type": "link"
+      }
+    ]
+  }

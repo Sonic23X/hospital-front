@@ -1,0 +1,15 @@
+{ 
+    "settings":
+      {
+        "layout_type":"ltr",
+        "layout":"default",
+        "sidebar_setting":"default-sidebar"
+      },
+    "color":
+      {
+            "layout_version":"light",
+            "primary_color": "rgb(99, 98, 231)", 
+      "secondary_color": "rgb(255, 197, 0)"
+      }
+    }
+    

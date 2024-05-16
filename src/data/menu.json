@@ -1,0 +1,53 @@
+{
+  "data": [
+    {
+      "path": "/",
+      "title": "Dashboard",
+      "icon": "home",
+      "type": "link",
+      "active": true
+    },
+    {
+      "path": "/users",
+      "title": "Usuarios",
+      "icon": "users",
+      "type": "link",
+      "active": true
+    },
+    {
+      "path": "/doctors",
+      "title": "Médicos",
+      "icon": "user",
+      "type": "link",
+      "active": true
+    },
+    {
+      "path": "/nurses",
+      "title": "Enfermeras",
+      "icon": "user",
+      "type": "link",
+      "active": true
+    },
+    {
+      "path": "/payment_report",
+      "title": "Reporte de pagos",
+      "icon": "dollar-sign",
+      "type": "link",
+      "active": true
+    },
+    {
+      "path": "/patient_discharge",
+      "title": "Alta de paciente",
+      "icon": "user-plus",
+      "type": "link",
+      "active": true
+    },
+    {
+      "path": "/inventory",
+      "title": "Inventarios",
+      "icon": "clipboard",
+      "type": "link",
+      "active": true
+    }
+  ]
+}

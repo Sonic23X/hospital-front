@@ -1,0 +1,58 @@
+import { createRouter, createWebHistory } from 'vue-router'
+import BodyView from "../layout/BodyView.vue"
+import dashbordView from "../components/dashbord/dashbordView"
+
+import indexDefault from "../components/dashbord/indexDefault"
+import indexEcommerce from "../components/dashbord/indexEcommerce"
+import indexCrypto from "../components/dashbord/indexCrypto"
+
+
+
+const routes = [
+  {
+    path:"/",
+    component:BodyView,
+    children: [
+      {
+        path: '',
+        name: 'defaultRoot',
+        component: indexDefault,
+      },
+    ]
+  },
+  {
+    path: '/dashboards',
+    component: BodyView,
+   
+    children: [
+      {
+        path: 'default',
+        name: 'defaultIndex',
+        component: indexDefault,
+      },
+      {
+        path:"e-commerce",
+        name:"E-Commerce",
+        component:indexEcommerce
+      },
+      {
+        path:"crypto",
+        name:"Crypto",
+        component:indexCrypto
+      }
+    ]
+  },
+ 
+]
+
+const router = createRouter({
+  history: createWebHistory(process.env.BASE_URL),
+  routes
+})
+router.beforeEach((to,) => {
+  if(to.meta.title)
+  document.title = to.meta.title;
+  
+});
+
+export default router

@@ -1,0 +1,35 @@
+{
+  "data": [
+  {
+  "headTitle1": "General",
+  "headTitle2": "Dashboards,Widgets & Layout.",
+  "type": "headtitle"
+  },
+  {
+    "title": "Dashboard",
+    "icon": "home",
+    "type": "sub",
+    "badgeType": "light-primary",
+    "badgeValue": "3",
+    "active": false,
+    "children": [
+      {
+        "path": "/dashboards/default",
+        "title": "Default",
+        "type": "link"
+      },
+      {
+        "path": "/dashboards/e-commerce",
+        "title": "Ecommerce",
+        "type": "link"
+      },
+      {
+        "path": "/dashboards/crypto",
+        "title": "Crypto",
+        "type": "link"
+      }
+    ]
+  }   
+]
+}
+  
