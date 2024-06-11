@@ -1,0 +1,58 @@
+{
+    "data":[
+        {
+            "img":"1.jpg",
+            "img1":"3.jpg",
+            "name":"Mark Jecno",
+            "title":"Manager",
+            "follower":"9564",
+            "following":"49",
+            "total":"96"
+        },
+        {
+            "img":"2.jpg",
+            "img1":"16.jpg",
+            "name":"Johan Deo",
+            "title":"Designer",
+            "follower":"2578",
+            "following":"26",
+            "total":"96"
+        },
+        {
+            "img":"3.jpg",
+            "img1":"11.jpg",
+            "name":"Dev John",
+            "title":"Devloper",
+            "follower":"6545",
+            "following":"91",
+            "total":"21"
+        },
+        {
+            "img":"7.jpg",
+            "img1":"16.jpg",
+            "name":"Johan Deo",
+            "title":"Designer",
+            "follower":"2578",
+            "following":"26",
+            "total":"96"
+        },
+        {
+            "img":"5.jpg",
+            "img1":"11.jpg",
+            "name":"Dev John",
+            "title":"Devloper",
+            "follower":"6545",
+            "following":"91",
+            "total":"21"
+        },
+        {
+            "img":"6.jpg",
+            "img1":"3.jpg",
+            "name":"Mark Jecno",
+            "title":"Manager",
+            "follower":"9564",
+            "following":"49",
+            "total":"96"
+        }
+    ]
+}

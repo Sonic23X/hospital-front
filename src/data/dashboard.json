@@ -1,0 +1,34 @@
+{
+    "data":[
+        {"name":"Gary","name1":"UK Desig Team","date":"12 May 2023","date1":"In 6 Days","project":"Product Design","project1":"$7,800","StatusClass":"badge-light-primary","image":"boy.png","badge":"Done"},
+        {"name":"Ralph Waters","name1":"UX Ninjas","date":"06 May 2023","date1":"Overdue","project":"Concept Design","project1":"$670","StatusClass":"badge-light-secondary","image":"girl.png","badge":"Pending"},
+         {"name":"Edwin Day","name1":"SF Dev Team","date":"28 Sep 2023","date1":"in 4 Months","project":"UX Consulting","project1":"$7,889","StatusClass":"badge-light-danger","image":"man.png","badge":"Rejected"},
+          {"name":"Gary","name1":"UK Desig Team","date":"12 May 2023","date1":"In 6 Days","project":"Product Design","project1":"Toyota","StatusClass":"badge-light-info","image":"woman.png","badge":"In Progress"}
+    ],
+    "delivery":[
+        {"name":"Nike Sports NK","name1":"Free delivery","date":"Harold More","date1":"UK Desig Team","project":"$99.85","project1":"Nok","Quantity":"20","StatusClass":"badge-light-primary","image":"running-shoe.png","badge" :"Done"},
+        {"name":"Women Bag","name1":"₹83.65 delivery","date":"Daniel Poller","date1":"UX Ninjas","project":"$79.99","project1":"Nok","Quantity":"12","StatusClass":"badge-light-secondary","image":"hand-bag.png","badge" :"Pending"},
+         {"name":"Sunglasses","name1":" Free delivery","date":"Frank Borker","date1":"SF Dev Team","project":"$59.20","project1":"Nok","Quantity":"23","StatusClass":"badge-light-danger","image":"sun-glasses.png","badge":"Rejected"},
+          {"name":"Cotton T-shirt","name1":"₹283.65 delivery","date":"Adam Moris","date1":"Moscow Office","project":"$49.99","project1":"Nok","Quantity":"34","StatusClass":"badge-light-info","image":"shirt.png","badge":"In Progress"}
+    ],
+    "cards":[
+        {"title":"Google Project Apply Reviwe","decs":"Today's News Headlines, Breaking...", "image":"rectangle-26.jpg","badge":"1 day ago"},
+        {"title":"Business Logo Create","decs":"Check out the latest news from...", "image":"rectangle-27.jpg","badge":"2 weeks ago"},
+         {"title":"Business Project Research","decs":"News in English: Get all Breaking...", "image":"rectangle-28.jpg","badge":"3 day ago"},
+          {"title":"Recruitment in it Department","decs":"Technology and Indian Business News...", "image":"rectangle-29.jpg","badge":"2 hours ago"},
+           {"title":"Business Project Research","decs":"News in English: Get all Breaking...", "image":"rectangle-28.jpg","badge":"3 day ago"}
+    ],
+    "selling":[ 
+        {"title":"Dominoes Coffee Table Game","decs":"60k Sales", "image":"rectangle-26.png","badge":"$50"},
+        {"title":"Photive Wireless speakers","decs":"35k Sales", "image":"rectangle-27.png","badge":"$25"},
+         {"title":"Urbanears Lotsen Speaker","decs":"53k Sales", "image":"rectangle-28.png","badge":"$30"},
+          {"title":"Plattan 2 Headphones","decs":"35k Sales", "image":"rectangle-29.png","badge":"$45"}
+        ],
+
+    "activitie":[
+        {"icon":"fa-trophy font-primary","title":"Win best seller of the year awaed","desc":"Company, San Francisco","badge":"1 day ago"},
+        {"icon":"fa-check-circle font-secondary","title":"Apporved our product","desc":"Elisse joson, San Francisco","badge":"2 weeks ago"},
+        {"icon":"fa-bookmark font-success","title":"Win best seller of the year awaed","desc":"Company, San Francisco","badge":"3 day ago"},
+        {"icon":"fa-shopping-basket font-warning","title":"Apporved our product in checking","desc":"35k Sales","badge":"2 hours ago"}
+    ]
+}

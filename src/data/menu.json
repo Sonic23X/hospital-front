@@ -1,0 +1,22 @@
+{
+  "data": [
+    {
+      "headTitle1": "General",
+      "type": "headtitle"
+    },
+    {
+      "title": "Inicio",
+      "icon": "home",
+      "type": "link",
+      "active": false,
+      "path": "/"
+    },
+    {
+      "title": "Inventario",
+      "icon": "shopping-bag",
+      "type": "link",
+      "active": false,
+      "path": "/inventary"
+    }
+  ]
+}

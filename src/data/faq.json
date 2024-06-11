@@ -1,0 +1,53 @@
+{
+    "articles": [
+        {
+            "title": "Using Video",
+            "icon": "codepen",
+            "desc": "Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus."
+        },
+        {
+            "title": "Vel illum qu",
+            "icon": "codepen",
+            "desc": "Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus."
+        },
+        {
+            "title": "Cum sociis natoqu",
+            "icon": "codepen",
+            "desc": "Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus."
+        }
+    ],
+    "articles1": [
+        {
+            "title": "Donec pede justo",
+            "icon": "file-text",
+            "desc": "Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus."
+        },
+        {
+            "title": "Nam quam nunc",
+            "icon": "file-text",
+            "desc": "Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus."
+        },
+        {
+            "title": "Using Video",
+            "icon": "file-text",
+            "desc": "Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus."
+        }
+    ],
+    "articles2": [
+        {
+            "title": "Vel illum qu",
+            "icon": "youtube",
+            "desc": "Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus."
+        },
+        {
+            "title": "Cum sociis natoqu",
+            "icon": "youtube",
+            "desc": "Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus."
+        },
+        {
+            "title": "Donec pede justo",
+            "icon": "youtube",
+            "desc": "Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus."
+        }
+    ]
+}

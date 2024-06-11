@@ -1,0 +1,67 @@
+{
+    "table":[
+        {"name":"Dummy text usedout print","date":"10","StatusClass":"badge-light-success","badge" :"Done"},
+        {"name":"Graphic or web designs","date":"20","StatusClass":"badge-light-warning","badge" :"Pending"},
+         {"name":"Attributed Passage","date":"40","StatusClass":"badge-light-success","badge" :" Done"},
+          {"name":"Unknown typesetter","date":"05","StatusClass":"badge-light-info","badge" :"In Progress"},
+           {"name":"Have scrambled","date":"08","StatusClass":"badge-light-warning","badge" :"Pending"},
+           {"name":"Type specimen","date":"12","StatusClass":"badge-light-warning","badge" :"Pending"}
+    ],
+    "employee":[
+        {
+            "id": 1,
+            "img": "4.jpg",
+            "name":"John Deo",
+            "online":"14+ Online",
+            "position": "Designer",
+            "skill": "progress-bar bg-primary",
+            "progress":"30%",
+            "exp": "2 Year"
+           
+        },
+        {
+            "id": 2,
+            "img": "1.jpg",
+            "name":"Holio Mako",
+            "online":"250+ Online",
+            "position": "Developer",
+            "skill": "progress-bar bg-secondary",
+            "progress":"70%",
+            "exp": "3 Year"
+           
+        },
+        {
+            "id": 3,
+            "img": "5.jpg",
+            "name":"Mohsib lara",
+            "online":"99+ Online",
+            "position": "Tester",
+            "skill": "progress-bar bg-primary",
+            "progress":"60%",
+            "exp": "5 Month"
+           
+        },
+        {
+            "id": 4,
+            "img": "6.jpg",
+            "name":"Hileri Soli",
+            "online":"150+ Online",
+            "position": "Designer",
+            "skill": "progress-bar bg-secondary",
+            "progress":"30%",
+            "exp": "3 Month"
+           
+        },
+        {
+            "id": 5,
+            "img": "7.jpg",
+            "name":"Pusiz bia",
+            "online":"14+ Online",
+            "position": "Designer",
+            "skill": "progress-bar bg-primary",
+            "progress":"90%",
+            "exp": "5 Year"
+           
+        }
+    ]
+}
