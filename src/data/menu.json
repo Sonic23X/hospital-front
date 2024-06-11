@@ -12,7 +12,7 @@
       "title": "Usuarios",
       "icon": "users",
       "type": "link",
-      "active": true
+      "active": false
     },
     {
       "path": "/doctors",
