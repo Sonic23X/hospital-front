@@ -1,0 +1,79 @@
+{
+    "productos": [
+      {
+        "nombreProducto": "Examen de Sangre",
+        "descripcion": "Análisis completo de sangre",
+        "precio": 500
+      },
+      {
+        "nombreProducto": "Rayos X",
+        "descripcion": "Radiografía del tórax",
+        "precio": 700
+      },
+      {
+        "nombreProducto": "Ecografía",
+        "descripcion": "Ecografía abdominal",
+        "precio": 1000
+      },
+      {
+        "nombreProducto": "Resonancia Magnética",
+        "descripcion": "Resonancia magnética cerebral",
+        "precio": 2000
+      },
+      {
+        "nombreProducto": "TAC",
+        "descripcion": "Tomografía axial computarizada",
+        "precio": 1500
+      },
+      {
+        "nombreProducto": "Electrocardiograma",
+        "descripcion": "ECG",
+        "precio": 300
+      },
+      {
+        "nombreProducto": "Holter",
+        "descripcion": "Monitorización ambulatoria del ECG",
+        "precio": 1200
+      },
+      {
+        "nombreProducto": "Densitometría Ósea",
+        "descripcion": "Medición de la densidad ósea",
+        "precio": 1100
+      },
+      {
+        "nombreProducto": "Gastroscopia",
+        "descripcion": "Examen del esófago, estómago y duodeno",
+        "precio": 1300
+      },
+      {
+        "nombreProducto": "Colonoscopia",
+        "descripcion": "Examen del colon",
+        "precio": 1400
+      },
+      {
+        "nombreProducto": "Ecocardiograma",
+        "descripcion": "Ultrasonido del corazón",
+        "precio": 1800
+      },
+      {
+        "nombreProducto": "Prueba de Esfuerzo",
+        "descripcion": "Evaluación de la función cardíaca bajo estrés",
+        "precio": 1600
+      },
+      {
+        "nombreProducto": "Espirometría",
+        "descripcion": "Prueba de función pulmonar",
+        "precio": 600
+      },
+      {
+        "nombreProducto": "Audiometría",
+        "descripcion": "Prueba de audición",
+        "precio": 400
+      },
+      {
+        "nombreProducto": "Examen de Orina",
+        "descripcion": "Análisis completo de orina",
+        "precio": 200
+      }
+    ]
+  }

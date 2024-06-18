@@ -3,7 +3,7 @@
     <div class="container-fluid">
         <div class="row pb-2">
             <div class="col-12 text-end">
-                <button type="button" class="btn btn-primary m-1">Agregar Pago</button>
+                <button type="button" class="btn btn-primary m-1">Registrar Venta</button>
                 <button type="button" class="btn btn-danger m-1">Exportar</button>
             </div>
         </div>

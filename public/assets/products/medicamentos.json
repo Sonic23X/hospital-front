@@ -1,0 +1,79 @@
+{
+    "productos": [
+      {
+        "nombreProducto": "Ibuprofeno",
+        "descripcion": "Antiinflamatorio no esteroideo",
+        "precio": 50
+      },
+      {
+        "nombreProducto": "Paracetamol",
+        "descripcion": "Analgésico y antipirético",
+        "precio": 30
+      },
+      {
+        "nombreProducto": "Amoxicilina",
+        "descripcion": "Antibiótico de amplio espectro",
+        "precio": 80
+      },
+      {
+        "nombreProducto": "Metformina",
+        "descripcion": "Medicamento para diabetes",
+        "precio": 100
+      },
+      {
+        "nombreProducto": "Loratadina",
+        "descripcion": "Antihistamínico",
+        "precio": 25
+      },
+      {
+        "nombreProducto": "Omeprazol",
+        "descripcion": "Inhibidor de la bomba de protones",
+        "precio": 60
+      },
+      {
+        "nombreProducto": "Simvastatina",
+        "descripcion": "Reductor de colesterol",
+        "precio": 70
+      },
+      {
+        "nombreProducto": "Losartán",
+        "descripcion": "Antihipertensivo",
+        "precio": 90
+      },
+      {
+        "nombreProducto": "Furosemida",
+        "descripcion": "Diurético",
+        "precio": 40
+      },
+      {
+        "nombreProducto": "Clopidogrel",
+        "descripcion": "Antiagregante plaquetario",
+        "precio": 120
+      },
+      {
+        "nombreProducto": "Salbutamol",
+        "descripcion": "Broncodilatador",
+        "precio": 55
+      },
+      {
+        "nombreProducto": "Cetirizina",
+        "descripcion": "Antihistamínico",
+        "precio": 35
+      },
+      {
+        "nombreProducto": "Atenolol",
+        "descripcion": "Betabloqueante",
+        "precio": 85
+      },
+      {
+        "nombreProducto": "Levotiroxina",
+        "descripcion": "Hormona tiroidea",
+        "precio": 45
+      },
+      {
+        "nombreProducto": "Doxiciclina",
+        "descripcion": "Antibiótico",
+        "precio": 75
+      }
+    ]
+  }

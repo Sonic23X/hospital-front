@@ -1,9 +1,9 @@
 <template>
-    <Breadcrumbs title="Usuarios"/>
+    <Breadcrumbs title="Pacientes"/>
     <div class="container-fluid">
         <div class="row pb-2">
             <div class="col-12 text-end">
-                <button type="button" class="btn btn-primary">Agregar Usuario</button>
+                <button type="button" class="btn btn-primary">Alta de Paciente</button>
             </div>
         </div>
         <div class="row pb-2">

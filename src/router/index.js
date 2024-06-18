@@ -7,6 +7,10 @@ import nursesView from "../components/dashbord/nursesView"
 import payment_reportView from "../components/dashbord/payment_reportView"
 import patient_dischargeView from "../components/dashbord/patient_dischargeView"
 import inventoryView from "../components/dashbord/inventoryView"
+import sales_pointView from "../components/dashbord/sales_pointView"
+import SalesDetailView from '../components/dashbord/SalesDetailView.vue';
+import SalesAddView from '../components/dashbord/SalesAddView.vue';
+
 
 const routes = [
   {
@@ -84,6 +88,40 @@ const routes = [
         name:"inventory",
         component:inventoryView,
       }
+    ]
+  },
+  {
+    path: '/',
+    component: BodyView,
+    children:[
+      {
+        path:'/sales_point',
+        name:"sales_point",
+        component:sales_pointView,
+      }
+    ]
+  },
+  {
+    path: '/',
+    component: BodyView,
+    children:[
+
+      {path: '/sales/:idVenta',
+      name: 'SalesDetailView',
+      component: SalesDetailView,
+      props: true // Permite pasar props a la vista de detalle}
+    }
+    ]
+  },
+  {
+    path: '/',
+    component: BodyView,
+    children:[
+
+      {path: '/sales/add',
+      name: 'SalesAddView',
+      component: SalesAddView,
+    }
     ]
   },
 ]

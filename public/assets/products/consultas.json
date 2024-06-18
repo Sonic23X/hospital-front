@@ -1,0 +1,79 @@
+{
+    "productos": [
+      {
+        "nombreProducto": "Consulta General",
+        "descripcion": "Consulta médica general",
+        "precio": 500
+      },
+      {
+        "nombreProducto": "Consulta Pediátrica",
+        "descripcion": "Consulta para niños",
+        "precio": 600
+      },
+      {
+        "nombreProducto": "Consulta Ginecológica",
+        "descripcion": "Consulta con ginecólogo",
+        "precio": 700
+      },
+      {
+        "nombreProducto": "Consulta Dermatológica",
+        "descripcion": "Consulta con dermatólogo",
+        "precio": 800
+      },
+      {
+        "nombreProducto": "Consulta Cardiológica",
+        "descripcion": "Consulta con cardiólogo",
+        "precio": 900
+      },
+      {
+        "nombreProducto": "Consulta Neurológica",
+        "descripcion": "Consulta con neurólogo",
+        "precio": 1000
+      },
+      {
+        "nombreProducto": "Consulta Oftalmológica",
+        "descripcion": "Consulta con oftalmólogo",
+        "precio": 1100
+      },
+      {
+        "nombreProducto": "Consulta Endocrinológica",
+        "descripcion": "Consulta con endocrinólogo",
+        "precio": 1200
+      },
+      {
+        "nombreProducto": "Consulta Psiquiátrica",
+        "descripcion": "Consulta con psiquiatra",
+        "precio": 1300
+      },
+      {
+        "nombreProducto": "Consulta Ortopédica",
+        "descripcion": "Consulta con ortopedista",
+        "precio": 1400
+      },
+      {
+        "nombreProducto": "Consulta Oncológica",
+        "descripcion": "Consulta con oncólogo",
+        "precio": 1500
+      },
+      {
+        "nombreProducto": "Consulta Urológica",
+        "descripcion": "Consulta con urólogo",
+        "precio": 1600
+      },
+      {
+        "nombreProducto": "Consulta Gastroenterológica",
+        "descripcion": "Consulta con gastroenterólogo",
+        "precio": 1700
+      },
+      {
+        "nombreProducto": "Consulta Reumatológica",
+        "descripcion": "Consulta con reumatólogo",
+        "precio": 1800
+      },
+      {
+        "nombreProducto": "Consulta Nefrológica",
+        "descripcion": "Consulta con nefrólogo",
+        "precio": 1900
+      }
+    ]
+  }

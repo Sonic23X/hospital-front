@@ -1,0 +1,22 @@
+[
+    { "id": 1, "nombre": "Paracetamol", "precio": 50, "descripcion": "Analgésico" },
+    { "id": 2, "nombre": "Ibuprofeno", "precio": 80, "descripcion": "Anti-inflamatorio" },
+    { "id": 3, "nombre": "Aspirina", "precio": 60, "descripcion": "Antipirético" },
+    { "id": 4, "nombre": "Jeringas", "precio": 30, "descripcion": "Un solo uso" },
+    { "id": 5, "nombre": "Alcohol", "precio": 25, "descripcion": "Desinfectante" },
+    { "id": 6, "nombre": "Gasas", "precio": 40, "descripcion": "Para heridas" },
+    { "id": 7, "nombre": "Venda Elástica", "precio": 70, "descripcion": "Soporte" },
+    { "id": 8, "nombre": "Termómetro", "precio": 100, "descripcion": "Medición fiebre" },
+    { "id": 9, "nombre": "Guantes", "precio": 50, "descripcion": "Protección" },
+    { "id": 10, "nombre": "Antiséptico", "precio": 60, "descripcion": "Limpieza" },
+    { "id": 11, "nombre": "Bata Médica", "precio": 120, "descripcion": "Ropa sanitaria" },
+    { "id": 12, "nombre": "Estetoscopio", "precio": 150, "descripcion": "Ausculatación" },
+    { "id": 13, "nombre": "Tijeras", "precio": 40, "descripcion": "Corte preciso" },
+    { "id": 14, "nombre": "Esparadrapo", "precio": 20, "descripcion": "Fijación" },
+    { "id": 15, "nombre": "Bisturí", "precio": 90, "descripcion": "Corte quirúrgico" },
+    { "id": 16, "nombre": "Mascarilla", "precio": 10, "descripcion": "Protección" },
+    { "id": 17, "nombre": "Suero Fisiológico", "precio": 80, "descripcion": "Hidratación" },
+    { "id": 18, "nombre": "Venda Adhesiva", "precio": 50, "descripcion": "Sujeción" },
+    { "id": 19, "nombre": "Tensiometro", "precio": 200, "descripcion": "Medición presión" },
+    { "id": 20, "nombre": "Oxímetro", "precio": 150, "descripcion": "Saturación O2" }
+]

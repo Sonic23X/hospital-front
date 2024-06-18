@@ -48,6 +48,13 @@
       "icon": "clipboard",
       "type": "link",
       "active": true
+    },
+    {
+      "path": "/sales_point",
+      "title": "Punto de Venta",
+      "icon": "dollar-sign",
+      "type": "link",
+      "active": true
     }
   ]
 }

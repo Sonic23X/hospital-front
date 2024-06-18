@@ -1,0 +1,289 @@
+{
+"ventas": [
+    {
+    "idVenta": 1,
+    "tipoDeVenta": "Cobro de consulta",
+    "metodoDePago": "Tarjeta de crédito",
+    "montoTotal": 1500,
+    "fechaDeVenta": "2024-06-01",
+    "vendedor": "Dr. Smith",
+    "generoFactura": true,
+    "productos": [
+        {
+        "nombreProducto": "Consulta general",
+        "descripcion": "Consulta médica general",
+        "precio": 500,
+        "cantidad": 1,
+        "total": 500
+        },
+        {
+        "nombreProducto": "Examen de sangre",
+        "descripcion": "Examen de sangre completo",
+        "precio": 300,
+        "cantidad": 1,
+        "total": 300
+        },
+        {
+        "nombreProducto": "Rayos X",
+        "descripcion": "Radiografía del tórax",
+        "precio": 700,
+        "cantidad": 1,
+        "total": 700
+        }
+    ]
+    },
+    {
+    "idVenta": 2,
+    "tipoDeVenta": "Venta de insumos",
+    "metodoDePago": "Efectivo",
+    "montoTotal": 250,
+    "fechaDeVenta": "2024-06-02",
+    "vendedor": "Juan Pérez",
+    "generoFactura": false,
+    "productos": [
+        {
+        "nombreProducto": "Termómetro digital",
+        "descripcion": "Termómetro digital para uso médico",
+        "precio": 25,
+        "cantidad": 2,
+        "total": 50
+        },
+        {
+        "nombreProducto": "Guantes de látex",
+        "descripcion": "Guantes de látex desechables",
+        "precio": 5,
+        "cantidad": 10,
+        "total": 50
+        },
+        {
+        "nombreProducto": "Mascarilla quirúrgica",
+        "descripcion": "Caja de 50 mascarillas quirúrgicas",
+        "precio": 100,
+        "cantidad": 1,
+        "total": 100
+        },
+        {
+        "nombreProducto": "Alcohol en gel",
+        "descripcion": "Botella de 500ml de alcohol en gel",
+        "precio": 25,
+        "cantidad": 2,
+        "total": 50
+        }
+    ]
+    },
+    {
+    "idVenta": 3,
+    "tipoDeVenta": "Venta de medicamento",
+    "metodoDePago": "Tarjeta de débito",
+    "montoTotal": 150,
+    "fechaDeVenta": "2024-06-03",
+    "vendedor": "Ana Gómez",
+    "generoFactura": true,
+    "productos": [
+        {
+        "nombreProducto": "Paracetamol",
+        "descripcion": "Caja de 20 tabletas de paracetamol",
+        "precio": 20,
+        "cantidad": 5,
+        "total": 100
+        },
+        {
+        "nombreProducto": "Ibuprofeno",
+        "descripcion": "Caja de 10 tabletas de ibuprofeno",
+        "precio": 50,
+        "cantidad": 1,
+        "total": 50
+        }
+    ]
+    },
+    {
+    "idVenta": 4,
+    "tipoDeVenta": "Elaboración de exámenes médicos y estudios",
+    "metodoDePago": "Transferencia bancaria",
+    "montoTotal": 1200,
+    "fechaDeVenta": "2024-06-04",
+    "vendedor": "Dr. Smith",
+    "generoFactura": true,
+    "productos": [
+        {
+        "nombreProducto": "Examen de sangre",
+        "descripcion": "Examen de sangre completo",
+        "precio": 300,
+        "cantidad": 1,
+        "total": 300
+        },
+        {
+        "nombreProducto": "Examen de orina",
+        "descripcion": "Análisis de orina completo",
+        "precio": 200,
+        "cantidad": 1,
+        "total": 200
+        },
+        {
+        "nombreProducto": "Tomografía",
+        "descripcion": "Tomografía axial computarizada",
+        "precio": 700,
+        "cantidad": 1,
+        "total": 700
+        }
+    ]
+    },
+    {
+    "idVenta": 5,
+    "tipoDeVenta": "Cobro de consulta",
+    "metodoDePago": "Efectivo",
+    "montoTotal": 1000,
+    "fechaDeVenta": "2024-06-05",
+    "vendedor": "Dra. Martínez",
+    "generoFactura": false,
+    "productos": [
+        {
+        "nombreProducto": "Consulta pediátrica",
+        "descripcion": "Consulta médica para niños",
+        "precio": 500,
+        "cantidad": 1,
+        "total": 500
+        },
+        {
+        "nombreProducto": "Vacuna triple viral",
+        "descripcion": "Vacuna contra sarampión, paperas y rubéola",
+        "precio": 500,
+        "cantidad": 1,
+        "total": 500
+        }
+    ]
+    },
+    {
+    "idVenta": 6,
+    "tipoDeVenta": "Venta de insumos",
+    "metodoDePago": "Tarjeta de crédito",
+    "montoTotal": 350,
+    "fechaDeVenta": "2024-06-06",
+    "vendedor": "Juan Pérez",
+    "generoFactura": true,
+    "productos": [
+        {
+        "nombreProducto": "Termómetro infrarrojo",
+        "descripcion": "Termómetro infrarrojo sin contacto",
+        "precio": 150,
+        "cantidad": 1,
+        "total": 150
+        },
+        {
+        "nombreProducto": "Oxímetro de pulso",
+        "descripcion": "Oxímetro de pulso para medir la saturación de oxígeno",
+        "precio": 100,
+        "cantidad": 1,
+        "total": 100
+        },
+        {
+        "nombreProducto": "Desinfectante en spray",
+        "descripcion": "Botella de desinfectante en spray",
+        "precio": 25,
+        "cantidad": 4,
+        "total": 100
+        }
+    ]
+    },
+    {
+    "idVenta": 7,
+    "tipoDeVenta": "Venta de medicamento",
+    "metodoDePago": "Efectivo",
+    "montoTotal": 180,
+    "fechaDeVenta": "2024-06-07",
+    "vendedor": "Ana Gómez",
+    "generoFactura": false,
+    "productos": [
+        {
+        "nombreProducto": "Amoxicilina",
+        "descripcion": "Caja de 12 tabletas de amoxicilina",
+        "precio": 60,
+        "cantidad": 2,
+        "total": 120
+        },
+        {
+        "nombreProducto": "Vitamina C",
+        "descripcion": "Caja de 30 tabletas de vitamina C",
+        "precio": 60,
+        "cantidad": 1,
+        "total": 60
+        }
+    ]
+    },
+    {
+    "idVenta": 8,
+    "tipoDeVenta": "Elaboración de exámenes médicos y estudios",
+    "metodoDePago": "Tarjeta de débito",
+    "montoTotal": 800,
+    "fechaDeVenta": "2024-06-08",
+    "vendedor": "Dr. Smith",
+    "generoFactura": true,
+    "productos": [
+        {
+        "nombreProducto": "Ecografía abdominal",
+        "descripcion": "Ecografía del abdomen completo",
+        "precio": 400,
+        "cantidad": 1,
+        "total": 400
+        },
+        {
+        "nombreProducto": "Electrocardiograma",
+        "descripcion": "Examen de electrocardiograma",
+        "precio": 400,
+        "cantidad": 1,
+        "total": 400
+        }
+    ]
+    },
+    {
+    "idVenta": 9,
+    "tipoDeVenta": "Cobro de consulta",
+    "metodoDePago": "Transferencia bancaria",
+    "montoTotal": 600,
+    "fechaDeVenta": "2024-06-09",
+    "vendedor": "Dra. Martínez",
+    "generoFactura": true,
+    "productos": [
+        {
+        "nombreProducto": "Consulta de nutrición",
+        "descripcion": "Consulta con nutricionista",
+        "precio": 300,
+        "cantidad": 1,
+        "total": 300
+        },
+        {
+        "nombreProducto": "Plan de alimentación",
+        "descripcion": "Plan de alimentación personalizado",
+        "precio": 300,
+        "cantidad": 1,
+        "total": 300
+        }
+    ]
+    },
+    {
+    "idVenta": 10,
+    "tipoDeVenta": "Venta de insumos",
+    "metodoDePago": "Efectivo",
+    "montoTotal": 400,
+    "fechaDeVenta": "2024-06-10",
+    "vendedor": "Juan Pérez",
+    "generoFactura": false,
+    "productos": [
+        {
+        "nombreProducto": "Mascarilla KN95",
+        "descripcion": "Caja de 20 mascarillas KN95",
+        "precio": 200,
+        "cantidad": 1,
+        "total": 200
+        },
+        {
+        "nombreProducto": "Gel antibacterial",
+        "descripcion": "Botella de 1 litro de gel antibacterial",
+        "precio": 100,
+        "cantidad": 2,
+        "total": 200
+        }
+    ]
+    }
+]
+}

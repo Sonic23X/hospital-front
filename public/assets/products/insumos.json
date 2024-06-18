@@ -1,0 +1,79 @@
+{
+    "productos": [
+      {
+        "nombreProducto": "Guantes de Látex",
+        "descripcion": "Caja de 100 guantes",
+        "precio": 100
+      },
+      {
+        "nombreProducto": "Mascarillas Quirúrgicas",
+        "descripcion": "Caja de 50 mascarillas",
+        "precio": 50
+      },
+      {
+        "nombreProducto": "Batas Descartables",
+        "descripcion": "Paquete de 10 batas",
+        "precio": 200
+      },
+      {
+        "nombreProducto": "Alcohol en Gel",
+        "descripcion": "Botella de 500 ml",
+        "precio": 30
+      },
+      {
+        "nombreProducto": "Termómetros Digitales",
+        "descripcion": "Termómetro digital",
+        "precio": 50
+      },
+      {
+        "nombreProducto": "Oxímetros de Pulso",
+        "descripcion": "Oxímetro de pulso",
+        "precio": 150
+      },
+      {
+        "nombreProducto": "Esfigmomanómetros",
+        "descripcion": "Medidor de presión arterial",
+        "precio": 250
+      },
+      {
+        "nombreProducto": "Estetoscopios",
+        "descripcion": "Estetoscopio de doble campana",
+        "precio": 300
+      },
+      {
+        "nombreProducto": "Gazas",
+        "descripcion": "Paquete de 100 gasas estériles",
+        "precio": 40
+      },
+      {
+        "nombreProducto": "Vendas Elásticas",
+        "descripcion": "Paquete de 10 vendas",
+        "precio": 70
+      },
+      {
+        "nombreProducto": "Tijeras Quirúrgicas",
+        "descripcion": "Tijeras de acero inoxidable",
+        "precio": 80
+      },
+      {
+        "nombreProducto": "Pinzas Hemostáticas",
+        "descripcion": "Pinzas de acero inoxidable",
+        "precio": 90
+       },
+        {
+        "nombreProducto": "Catéteres",
+        "descripcion": "Caja de 50 catéteres",
+        "precio": 120
+        },
+        {
+        "nombreProducto": "Suturas",
+        "descripcion": "Paquete de 10 suturas",
+        "precio": 150
+        },
+        {
+        "nombreProducto": "Desinfectantes",
+        "descripcion": "Botella de 1 litro",
+        "precio": 60
+        }
+    ]
+}
