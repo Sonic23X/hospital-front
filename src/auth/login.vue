@@ -72,9 +72,12 @@ export default {
           localStorage.setItem('token', response.data.token)
           this.$router.replace('/');
         } else {
-          this.$toast.show('invalid email and password ', { theme: 'outline', position: 'top-right', icon: 'times', type: 'error', duration: 2000 });
+          this.$toast.show('Correo o contraseña invalidos', { theme: 'outline', position: 'top-right', icon: 'times', type: 'error', duration: 2000 });
         }
       })
+      .catch((error) => {
+        this.$toast.show('Ah ocurrido un error, intente más tarde.', { theme: 'outline', position: 'top-right', icon: 'times', type: 'error', duration: 2000 });
+      });
     },
 
   }

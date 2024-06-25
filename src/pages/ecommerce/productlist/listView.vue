@@ -8,9 +8,16 @@
           <div class="table-responsive product-table">
             <form class="dataTables_wrapper no-footer">
               <div class="mb-3 row">
-                <router-link to="/inventary/add" class="btn btn-primary">
-                  Agregar producto
-                </router-link>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                  <router-link to="/inventary/add" class="btn btn-primary w-100">
+                    Agregar producto
+                  </router-link>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                  <button class="btn btn-primary w-100">
+                    Cargar productos por excel
+                  </button>
+                </div>
               </div>
               <table class="display table-striped table-hover table-bordered table" id="basic-1">
                 <thead>
