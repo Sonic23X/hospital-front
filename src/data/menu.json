@@ -17,6 +17,13 @@
       "type": "link",
       "active": false,
       "path": "/inventary"
+    },
+    {
+      "title": "Ventas",
+      "icon": "dollar-sign",
+      "type": "link",
+      "active": false,
+      "path": "/sales"
     }
   ]
 }

@@ -100,6 +100,10 @@ import productList from "../pages/ecommerce/productlist/productList.vue"
 import orderHistory from "../pages/ecommerce/orderhistory/orderHistory.vue"
 import productForm from "../pages/ecommerce/new/productForm.vue"
 
+import SalesTable from "../pages/sales/admin/list/index.vue"
+import SalesDetails from "../pages/sales/admin/details/index.vue"
+import SalesPointView from "../pages/sales/salesView/index.vue"
+
 const routes = [
   {
     path:"/",
@@ -158,6 +162,36 @@ const routes = [
         }
       },
     ]
+  },
+  {
+    path:"/sales",
+    component:BodyView,
+    children:[
+      {
+        path:"",
+        name:"Hospital - Ventas",
+        component: SalesTable,
+        meta: {
+          title: 'Hospital - Ventas',
+        }
+      },
+      {
+        path:"details/:id",
+        name:"salesDetails",
+        component: SalesDetails,
+        meta: {
+          title: 'Hospital - Detalles de venta',
+        }
+      },
+      {
+        path: "checkout",
+        name: "salesPointView",
+        component: SalesPointView,
+        meta: {
+          title: 'Ventas',
+        }
+      }
+    ],
   },
   {
     path:"/widgets",
