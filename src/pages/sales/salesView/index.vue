@@ -40,7 +40,7 @@
           <div class="card-body">
             <div class="d-flex justify-content-between mb-3">
               <strong>Total:</strong>
-              <strong>{{ currency(totalCarrito) }}</strong>
+              <strong>{{ currency( parseFloat(totalCarrito)) }}</strong>
             </div>
             <form @submit.prevent="procesarCompra">
               <div class="mb-3">
@@ -89,12 +89,8 @@
     export default {
         data() {
             return {
-                productos: [
-                    { id: 1, nombre: 'Producto 1', descripcion: 'Descripción del producto 1', precio: 10, imagen: 'ruta_a_imagen', codigoBarras: 1 },
-                    { id: 2, nombre: 'Producto 2', descripcion: 'Descripción del producto 2', precio: 20, imagen: 'ruta_a_imagen', codigoBarras: 2 },
-                    // Agrega más productos aquí
-                ],
-                carrito: [],
+                productos: [ ],
+                carrito: [ ],
                 codigoBarras: '',
                 formaPago: 'efectivo',
                 requiereFactura: false,
@@ -106,7 +102,7 @@
         },
         computed: {
             totalCarrito() {
-                return this.carrito.reduce((total, item) => total + item.cantidad * item.precio, 0);
+                return this.carrito.reduce((total, item) => total + item.cantidad * item.price, 0);
             },
             cambio() {
                 return this.montoRecibido - this.totalCarrito;
@@ -134,12 +130,8 @@
                 }
             },
             buscarProducto() {
-                console.log(this.productos);
-                this.generarTicket();
                 const producto = this.productos.find((p) => {
-                    console.log(this.codigoBarras);
-                    console.log(p.codigoBarras);
-                    return p.codigoBarras == this.codigoBarras;
+                    return p.barcode == this.codigoBarras;
                 });
                 
                 if (producto) {
@@ -161,35 +153,32 @@
                     total_amount: this.totalCarrito,
                     purchase_date: new Date().toISOString(),
                     payment_method: this.formaPago,
-                    status: 'pagado', // Ajusta el estado según tu lógica
+                    status: 1,
                     items: this.carrito.map(item => ({
                         product_id: item.id,
                         quantity: item.cantidad,
                         price: item.price
                     })),
-                    notes: '', // Agrega notas si es necesario
-                    emailFactura: this.email // Asegúrate de que el campo emailFactura esté disponible
+                    notes: '',
+                    emailFactura: this.email
                 };
-                this.generarTicket();
-                alert('Compra procesada');
-                    
-                    this.carrito = [];
-                    this.montoRecibido = 0;
-                    this.numeroTarjeta = '';
-                    this.emailFactura = '';
-                /*try {
 
-
+                try {
                     const response = await axios.post(apiDetails.url + 'api/sales', venta, {
                         headers: {
                             'Authorization': `${this.accessToken}` // Incluir el token de acceso en las cabeceras
                         }
                     });
+                    alert('Compra procesada');
                     
+                    this.carrito = [];
+                    this.montoRecibido = 0;
+                    this.numeroTarjeta = '';
+                    this.emailFactura = '';
                 } catch (error) {
                     console.error('Error al registrar la venta:', error);
                     alert('Hubo un error al procesar la compra. Inténtalo de nuevo.');
-                }*/
+                }
             },
             eliminarDelCarrito(producto) {
                 const index = this.carrito.indexOf(producto);
@@ -231,8 +220,7 @@
             }
         },
         mounted() {
-            //this.obtenerProductos(); // Llama a obtenerProductos al montar el componente
-            //this.generarTicket();
+            this.obtenerProductos(); // Llama a obtenerProductos al montar el componente
         }
     }
 </script>
