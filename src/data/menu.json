@@ -24,6 +24,36 @@
       "type": "link",
       "active": false,
       "path": "/sales"
+    },
+    {
+      "title": "Pacientes",
+      "icon": "search",
+      "type": "link",
+      "active": false,
+      "path": "/patients"
+    },
+    {
+      "title": "Recepción",
+      "icon": "home",
+      "type": "sub",
+      "active": false,
+      "children": [
+        {
+          "path": "/events",
+          "title": "Citas",
+          "type": "link"
+        },
+        {
+          "path": "/visits",
+          "title": "Visitas",
+          "type": "link"
+        },
+        {
+          "path": "/sales/checkout",
+          "title": "Punto de venta",
+          "type": "link"
+        }
+      ]
     }
   ]
 }

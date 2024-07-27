@@ -85,7 +85,6 @@ import chartJSChart from "../pages/charts/chartJS/chartJSChart.vue"
 import basicTables from "../pages/tables/bootstrap/basictable/basicTables.vue"
 import tableComponents from "../pages/tables/bootstrap/tablecomponents/tableComponents.vue"
 
-
 import basicInit from "../pages/tables/datatable/basicinit/basicInit.vue"
 
 import indexProduct from "../pages/ecommerce/product/indexProduct.vue"
@@ -103,6 +102,16 @@ import productForm from "../pages/ecommerce/new/productForm.vue"
 import SalesTable from "../pages/sales/admin/list/index.vue"
 import SalesDetails from "../pages/sales/admin/details/index.vue"
 import SalesPointView from "../pages/sales/salesView/index.vue"
+
+import indexEvents from "../pages/events/list/index.vue"
+import createEvent from "../pages/events/create/index.vue"
+
+import indexVisits from "../pages/visits/index/index.vue"
+import createVisit from "../pages/visits/create/index.vue"
+
+import indexPatients from "../pages/patients/list/index.vue"
+import detailsPatient from "../pages/patients/details/index.vue"
+
 
 const routes = [
   {
@@ -668,6 +677,73 @@ const routes = [
     ]
   },
   {
+    path:"/visits",
+    component:BodyView,
+    children:[
+      {
+        path:"",
+        name:"visits",
+        component: indexVisits,
+        meta: {
+          title: 'Hospital - Visitas',
+        }
+      },
+      {
+        path:"create",
+        name:"visitsCreate",
+        component: createVisit,
+        meta: {
+          title: 'Hospital - Nueva visita',
+        }
+      },
+    ]
+  },
+  {
+    path:"/events",
+    component: BodyView,
+    children:[
+      {
+        path:"",
+        name:"events",
+        component: indexEvents,
+        meta: {
+          title: 'Hospital - Citas',
+        }
+      },
+      {
+        path:"create",
+        name:"eventsCreate",
+        component: createEvent,
+        meta: {
+          title: 'Hospital - Nueva cita',
+        }
+      }
+    ]
+  },
+  {
+    path:"/patients",
+    component: BodyView,
+    children:[
+      {
+        path:"",
+        name:"patientsList",
+        component: indexPatients,
+        meta: {
+          title: 'Hospital - Pacientes',
+        }
+      },
+      {
+        path:"details/:id",
+        name:"patientsDetails",
+        component: detailsPatient,
+        meta: {
+          title: 'Hospital - Expediente',
+        }
+      }
+    ]
+  },
+
+  {
      path:"/chart",
      component:BodyView,
      children:[
@@ -733,7 +809,6 @@ const routes = [
       }
     ]
   },
-
   {
     path:"/ecommerce",
     component:BodyView,
