@@ -175,6 +175,8 @@
                     this.montoRecibido = 0;
                     this.numeroTarjeta = '';
                     this.emailFactura = '';
+                    
+                    this.$refs.codigoBarrasInput.focus();
                 } catch (error) {
                     console.error('Error al registrar la venta:', error);
                     alert('Hubo un error al procesar la compra. Inténtalo de nuevo.');
