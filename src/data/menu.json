@@ -54,6 +54,13 @@
           "type": "link"
         }
       ]
+    },
+    {
+      "title": "Hospitalización",
+      "icon": "calendar",
+      "type": "link",
+      "active": false,
+      "path": "/hospitalizations"
     }
   ]
 }

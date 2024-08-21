@@ -1,4 +1,4 @@
 export const apiDetails = {
-    url: 'http://localhost:8000/',
-    urlImage: 'http://localhost:8000',
+    url: 'http://hospital-api.develop/',
+    urlImage: 'http://hospital-api.develop',
 }
