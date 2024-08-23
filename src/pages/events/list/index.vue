@@ -131,7 +131,7 @@ export default {
           showCancelButton: true,
           confirmButtonColor: '#d33',
           cancelButtonColor: '#3085d6',
-          confirmButtonText: 'Sí, borrarlo!',
+          confirmButtonText: 'Ok',
           cancelButtonText: 'Cancelar'
         });
         if (!isConfirmed) {
@@ -161,7 +161,7 @@ export default {
           showCancelButton: true,
           confirmButtonColor: '#d33',
           cancelButtonColor: '#3085d6',
-          confirmButtonText: 'Sí, borrarlo!',
+          confirmButtonText: 'Ok',
           cancelButtonText: 'Cancelar'
         });
         if (!isConfirmed) {
