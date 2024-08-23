@@ -39,7 +39,7 @@
                   <td class="sorting_1">{{ row.room_id }}</td>
                   <td class="sorting_1">
                     <router-link :to="'/hospitalizations/details/' + row.id">
-                        <h6>{{ row.patient_id }}</h6>
+                        <h6>{{ row.patient_name }}</h6>
                     </router-link>
                   </td>
                   <td class="sorting_1">{{ row.patient_familiar_name }}</td>

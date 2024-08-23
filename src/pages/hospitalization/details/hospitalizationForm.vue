@@ -88,10 +88,7 @@ export default {
                 { id: 1, name: "Habitación 101" },
                 { id: 2, name: "Habitación 102" }
             ],
-            patients: [
-                { id: 1, name: "Paciente A" },
-                { id: 2, name: "Paciente B" }
-            ],
+            patients: [],
             isReadOnly: false,
             accessToken: 'Bearer ' + localStorage.getItem('token')
         };
@@ -112,6 +109,19 @@ export default {
                     console.error('Error al obtener los datos de la API:', error);
                 });
             }
+        },
+        getPatients() {
+            axios.get(`${apiDetails.url}api/patients`, {
+                headers: {
+                    'Authorization': this.accessToken
+                }
+            })
+            .then(response => {
+                this.patients = response.data;
+            })
+            .catch(error => {
+                console.error('Error al obtener los datos de la API:', error);
+            });
         },
         saveHospitalization() {
             const method = this.hospitalizationId ? 'put' : 'post';
@@ -144,6 +154,7 @@ export default {
         }
     },
     created() {
+        this.getPatients();
         this.fetchData();
     }
 }
