@@ -1,6 +1,6 @@
 <template>
-    <Breadcrumbs :title="`Expediente de ${patient.name}`" main="Pacientes"/>
-    <div class="container-fluid list-products">
+    <Breadcrumbs v-if="patient" :title="`Expediente de ${patient.name}`" main="Pacientes" />
+    <div v-if="patient" class="container-fluid list-products">
         <div class="row">
             <div class="col-sm-12">
                 <div class="card">
@@ -21,7 +21,7 @@
                                 <strong>Edad:</strong> {{ patient.age || 'No disponible' }}
                             </div>
                             <div class="col-md-6 col-lg-6 col-sm-12">
-                                <strong>Fecha de nacimiento:</strong> {{ patient.birthDate }}
+                                <strong>Fecha de nacimiento:</strong> {{ patient.birthdate }}
                             </div>
                             <div class="col-md-6 col-lg-6 col-sm-12 mb-3">
                                 <strong>Género:</strong> {{ patient.gender || 'No disponible' }}
@@ -80,13 +80,13 @@
                         <h5>Citas pasadas</h5>
                     </div>
                     <div class="card-body">
-                        <span v-if="pastAppointments.length === 0">Sin registros</span>
+                        <span v-if="patient.appointments.length === 0">Sin registros</span>
                         <ul v-else>
-                            <li v-for="appointment in pastAppointments" :key="appointment.id">
+                            <li v-for="appointment in patient.appointments" :key="appointment.id">
                                 <strong>
-                                    {{ new Date(appointment.appointmentDate).toLocaleDateString('es-MX') }}:
-                                </strong> 
-                                {{ appointment.consultationType }} con {{ appointment.doctorName }}
+                                    {{ `${appointment.appointment_date} ${appointment.appointment_time}` }}
+                                </strong>
+                                {{ appointment.consultation_type }} con {{ appointment.doctor_id }}
                             </li>
                         </ul>
                     </div>
@@ -102,41 +102,45 @@
 
                         <div class="mt-5">
                             <button class="btn btn-primary w-100">
-                                <i data-feather="plus"></i> Subir archivo 
+                                <i data-feather="plus"></i> Subir archivo
                             </button>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>      
+        </div>
     </div>
-  </template>
-  
-  <script>
-  export default {
+</template>
+
+<script>
+import axios from 'axios';
+import { apiDetails } from "@/constants/api";
+export default {
     data() {
-      return {
-        patient: null,
-        pastAppointments: []
-      };
+        return {
+            patient: null,
+            accessToken: 'Bearer ' + localStorage.getItem('token')
+        };
     },
     created() {
-      this.fetchPatientRecord();
+        this.fetchPatientRecord();
     },
     methods: {
-      fetchPatientRecord() {
-        const patientId = this.$route.params.id;
-        const storedPatients = localStorage.getItem('patients');
-        if (storedPatients) {
-          const patients = JSON.parse(storedPatients);
-          this.patient = patients.find(patient => patient.id === parseInt(patientId));
+        async fetchPatientRecord() {
+            try {
+
+                const patientId = this.$route.params.id;
+                const { data } = await axios.get(`${apiDetails.url}api/patients/${patientId}`, {
+                    headers: {
+                        'Authorization': this.accessToken,
+                    },
+                });
+                this.patient = data;
+            } catch (error) {
+                console.error('Error al obtener los datos de la API:', error);
+            }
+
         }
-        const storedAppointments = localStorage.getItem('appointments');
-        if (storedAppointments) {
-          const appointments = JSON.parse(storedAppointments);
-          this.pastAppointments = appointments.filter(appointment => appointment.patientName === this.patient.name);
-        }
-      }
     }
-  };
+};
 </script>

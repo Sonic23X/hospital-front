@@ -111,6 +111,7 @@ import createVisit from "../pages/visits/create/index.vue"
 
 import indexPatients from "../pages/patients/list/index.vue"
 import detailsPatient from "../pages/patients/details/index.vue"
+import createPatient from "../pages/patients/create/index.vue"
 
 import indexHospitalizations from "../pages/hospitalization/list/hospitalizationList.vue"
 import detailsHospitalization from "../pages/hospitalization/details/form.vue"
@@ -741,6 +742,14 @@ const routes = [
         component: detailsPatient,
         meta: {
           title: 'Hospital - Expediente',
+        }
+      },
+      {
+        path:"create",
+        name:"patientsCreate",
+        component: createPatient,
+        meta: {
+          title: 'Hospital - Pacientes',
         }
       }
     ]
