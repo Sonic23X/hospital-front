@@ -1,29 +1,29 @@
 <template>
-    <div class="container-fluid list-hospitalizations">
+    <div class="container-fluid list-doctors">
         <div class="row">
-            <HospitalizationForm :hospitalizationId="hospitalizationId"/>
+            <DoctorForm :doctorId="doctorId"/>
         </div>
     </div>
 </template>
 
 <script>
-import HospitalizationForm from "./hospitalizationForm.vue";
+import DoctorForm from "./doctorForm.vue";
 import { computed } from 'vue';
 import { useRoute } from 'vue-router';
 
 export default {
     components: {
-        HospitalizationForm
+        DoctorForm
     },
     setup() {
         const route = useRoute();
-        const hospitalizationId = computed(() => {
+        const doctorId = computed(() => {
             const id = route.params.id;
             return id ? parseInt(id) : null;
         });
 
         return {
-            hospitalizationId
+            doctorId
         };
     }
 }

@@ -38,8 +38,8 @@
                       + appointment.appointment_time).toLocaleDateString('es-MX') }}</td>
                     <td>{{ appointment.consultation_type }}</td>
                     <td>{{ appointment.patient.name }}</td>
-                    <td>Test Doctor {{ appointment.doctor_id }}</td>
-                    <td>Test Doctor {{ appointment.doctor_id }}</td>
+                    <td>{{ appointment.doctor.name }}</td>
+                    <td>{{ appointment.specialty.name }}</td>
                     <td>{{ appointment.status }}</td>
                     <td>
                       <button v-if="appointment.status != 'done' && appointment.status != 'cancelled'"

@@ -6,7 +6,7 @@
                 <div class="mb-3">
                     <label for="appointment_date" class="form-label">Asignar fecha</label>
                     <input type="date" class="form-control" id="appointment_date"
-                        v-model="form.appointment_date" required>
+                        v-model="form.appointment_date" required @change="filterDoctors">
                 </div>
                 <div class="mb-3">
                     <label for="appointment_time" class="form-label">Asignar hora</label>
@@ -39,16 +39,16 @@
                     <label class="form-label" for="doctor_id">Médico</label>
                     <select class="form-select digits" id="doctor_id" required v-model="form.doctor_id"
                         @change="fillSpecialties">
-                        <option v-for="doctor in filteredDoctors" :key="doctor.id" :value="doctor.id">{{ doctor.name }}
+                        <option v-for="doctor in doctors" :key="doctor.id" :value="doctor.id">{{ doctor.name }}
                         </option>
                     </select>
                 </div>
-                <!-- <div class="mb-3" v-if="availableSpecialties.length > 0">
+                <div class="mb-3" v-if="availableSpecialties.length > 0">
                     <label for="specialty" class="form-label">Especialidad</label>
-                    <select class="form-control" id="specialty" v-model="form.specialty" required>
-                        <option v-for="specialty in availableSpecialties" :key="specialty" :value="specialty">{{ specialty }}</option>
+                    <select class="form-control" id="specialty" v-model="form.specialty_id" required>
+                        <option v-for="specialty in availableSpecialties" :key="specialty.id" :value="specialty.id">{{ specialty.name }}</option>
                     </select>
-                </div> -->
+                </div>
                 <div class="mb-3">
                     <label for="patient_phone" class="form-label">Teléfono</label>
                     <input type="text" class="form-control" id="patient_phone" v-model="form.patient_phone" required>
@@ -93,6 +93,7 @@ export default {
                 consultation_type: '',
                 patient_name: '',
                 doctor_id: '',
+                specialty_id: '',
                 patient_phone: '',
                 patient_address: '',
                 patient_birthdate: '',
@@ -102,28 +103,8 @@ export default {
                 reason: '',
                 patient_gender: '',
             },
-            doctors: [
-                {
-                    id: 1,
-                    name: 'Dr. Juan Pérez',
-                    specialties: ['Cardiología', 'Medicina Interna'],
-                    schedules: ['08:00', '09:00', '10:00', '19:00', '20:00', '21:00']
-                },
-                {
-                    id: 2,
-                    name: 'Dra. Ana Gómez',
-                    specialties: ['Neurología', 'Psiquiatría'],
-                    schedules: ['10:00', '11:00', '12:00']
-                },
-                {
-                    id: 3,
-                    name: 'Dr. Carlos Martínez',
-                    specialties: ['Dermatología', 'Cirugía'],
-                    schedules: ['13:00', '14:00', '15:00']
-                }
-            ],
+            doctors: [],
             genders: ["Masculino", "Femenino", "Otro"],
-            filteredDoctors: [],
             availableSpecialties: [],
             showAdditionalSelect: false,
             additionalSelectLabel: '',
@@ -184,27 +165,39 @@ export default {
             }
         },
         filterDoctors() {
-            const selectedTime = this.timeToMinutes(this.form.appointment_time);
-            console.log(selectedTime);
-            this.filteredDoctors = this.doctors.filter(doctor =>
-                doctor.schedules.some(schedule => this.timeToMinutes(schedule) === selectedTime)
-            );
-            this.availableSpecialties = [];
-            this.form.specialty = '';
+            if (!this.form.appointment_time || !this.form.appointment_date) {
+                return;
+            }
+            const params = {
+                time: this.form.appointment_time,
+                date: this.form.appointment_date
+            }
+            axios.get(`${apiDetails.url}api/doctors`, {
+                params: params,
+                headers: {
+                    'Authorization': this.accessToken
+                }
+            })
+            .then(response => {
+                this.doctors = response.data;
+            })
+            .catch(error => {
+                console.error('Error al obtener los datos de la API:', error);
+            });
         },
         fillSpecialties() {
-            // const selectedDoctor = this.doctors.find(doctor => doctor.name === this.form.doctorName);
-            // if (selectedDoctor) {
-            //     this.availableSpecialties = selectedDoctor.specialties;
-            //     if (this.availableSpecialties.length === 1) {
-            //         this.form.specialty = this.availableSpecialties[0];
-            //     } else {
-            //         this.form.specialty = '';
-            //     }
-            // } else {
-            //     this.availableSpecialties = [];
-            //     this.form.specialty = '';
-            // }
+            const selectedDoctor = this.doctors.find(doctor => doctor.id === this.form.doctor_id);
+            if (selectedDoctor) {
+                this.availableSpecialties = selectedDoctor.specialties;
+                if (this.availableSpecialties.length === 1) {
+                    this.form.specialty_id = this.availableSpecialties[0].id;
+                } else {
+                    this.form.specialty_id = null;
+                }
+            } else {
+                this.availableSpecialties = [];
+                this.form.specialty_id = null;
+            }
         },
         handleConsultationTypeChange() {
             // const consultation_type = this.form.consultation_type;
@@ -223,8 +216,5 @@ export default {
             return this.additionalOptions[this.form.consultation_type] || [];
         }
     },
-    created() {
-        this.filteredDoctors = this.doctors;
-    }
 };
 </script>

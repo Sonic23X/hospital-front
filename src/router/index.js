@@ -116,6 +116,9 @@ import createPatient from "../pages/patients/create/index.vue"
 import indexHospitalizations from "../pages/hospitalization/list/hospitalizationList.vue"
 import detailsHospitalization from "../pages/hospitalization/details/form.vue"
 
+import indexDoctors from "../pages/doctors/list/index.vue"
+import detailsDoctor from "../pages/doctors/details/form.vue"
+
 
 const routes = [
   {
@@ -772,6 +775,28 @@ const routes = [
         component: detailsHospitalization,
         meta: {
           title: 'Hospital - Hospitalización',
+        }
+      }
+    ]
+  },
+  {
+    path:"/doctors",
+    component: BodyView,
+    children:[
+      {
+        path:"",
+        name:"doctorsList",
+        component: indexDoctors,
+        meta: {
+          title: 'Hospital - Doctores',
+        }
+      },
+      {
+        path:"details/:id?",
+        name:"doctorsDetails",
+        component: detailsDoctor,
+        meta: {
+          title: 'Hospital - Doctor',
         }
       }
     ]
