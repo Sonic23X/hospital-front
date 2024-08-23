@@ -86,7 +86,7 @@
                                 <strong>
                                     {{ `${appointment.appointment_date} ${appointment.appointment_time}` }}
                                 </strong>
-                                {{ appointment.consultation_type }} con {{ appointment.doctor_id }}
+                                {{ appointment.consultation_type }} con {{ appointment.doctor.name }}
                             </li>
                         </ul>
                     </div>
