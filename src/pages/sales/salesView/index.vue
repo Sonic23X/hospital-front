@@ -118,7 +118,12 @@
                     });
                     this.productos = response.data; // Asignar los productos obtenidos de la API a la variable local
                 } catch (error) {
-                    alert('Hubo un problema al cargar los productos. Inténtalo de nuevo más tarde.');
+                  this.$swal.fire({
+                    title: 'Advertencia',
+                    text: 'Hubo un problema al cargar los productos. Inténtalo de nuevo más tarde.',
+                    icon: 'warning',
+                    confirmButtonText: 'Aceptar',
+                  });
                 }
             },
             agregarAlCarrito(producto) {
@@ -138,14 +143,25 @@
                     this.agregarAlCarrito(producto);
                     this.codigoBarras = '';
                 } else {
-                    alert('Producto no encontrado');
+                  
+                  this.$swal.fire({
+                    title: 'Advertencia',
+                    text: 'Producto no encontrado',
+                    icon: 'warning',
+                    confirmButtonText: 'Aceptar',
+                  });
                 }
 
                 this.$refs.codigoBarrasInput.focus();
             },
             async procesarCompra() {
                 if (this.formaPago === 'efectivo' && this.montoRecibido < this.totalCarrito) {
-                    alert('El monto recibido no es suficiente para cubrir el total');
+                    this.$swal.fire({
+                      title: 'Advertencia',
+                      text: 'El monto recibido no es suficiente para cubrir el total',
+                      icon: 'warning',
+                      confirmButtonText: 'Aceptar',
+                    });
                     return;
                 }
 
@@ -169,7 +185,14 @@
                             'Authorization': `${this.accessToken}` // Incluir el token de acceso en las cabeceras
                         }
                     });
-                    alert('Compra procesada');
+
+                    this.$swal.fire({
+                      icon: "success",
+                      title: "Compra procesada con éxito",
+                      showConfirmButton: false,
+                      timer: 1500
+                    });
+                    
                     
                     this.carrito = [];
                     this.montoRecibido = 0;
@@ -179,8 +202,18 @@
                     this.$refs.codigoBarrasInput.focus();
                 } catch (error) {
                     console.error('Error al registrar la venta:', error);
-                    alert('Hubo un error al procesar la compra. Inténtalo de nuevo.');
+                    const errorMessage = this.getErrorMessages(error.response.data.errors) ?? 'Hubo un error al procesar la compra. Inténtalo de nuevo.';
+                    this.$swal.fire({
+                        title: 'Error',
+                        html: errorMessage,
+                        icon: 'error',
+                        confirmButtonText: 'Aceptar',
+                    });
                 }
+            },
+            getErrorMessages(errors) {
+              const errorArray = Object.values(errors).flat();
+              return errorArray.join('<br>');
             },
             eliminarDelCarrito(producto) {
                 const index = this.carrito.indexOf(producto);

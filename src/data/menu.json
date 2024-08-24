@@ -33,6 +33,13 @@
       "path": "/patients"
     },
     {
+      "title": "Doctores",
+      "icon": "user-plus",
+      "type": "link",
+      "active": false,
+      "path": "/doctors"
+    },
+    {
       "title": "Recepción",
       "icon": "home",
       "type": "sub",
@@ -54,6 +61,13 @@
           "type": "link"
         }
       ]
+    },
+    {
+      "title": "Hospitalización",
+      "icon": "calendar",
+      "type": "link",
+      "active": false,
+      "path": "/hospitalizations"
     }
   ]
 }
