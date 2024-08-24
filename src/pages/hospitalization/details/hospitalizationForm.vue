@@ -149,9 +149,19 @@ export default {
                 });
             })
             .catch(error => {
-                console.error('Error al guardar la hospitalización:', error);
+                const errorMessage = this.getErrorMessages(error.response.data.errors) ?? 'Error al guardar la hospitalización.';
+                this.$swal.fire({
+                title: 'Error',
+                html: errorMessage,
+                icon: 'error',
+                confirmButtonText: 'Aceptar',
+                });
             });
-        }
+        },
+        getErrorMessages(errors) {
+            const errorArray = Object.values(errors).flat();
+            return errorArray.join('<br>');
+        },
     },
     created() {
         this.getPatients();

@@ -120,9 +120,20 @@ export default {
                     });
                 })
                 .catch(error => {
+                    const errorMessage = this.getErrorMessages(error.response.data.errors) ?? 'Error al guardar el doctor.';
+                    this.$swal.fire({
+                        title: 'Error',
+                        html: errorMessage,
+                        icon: 'error',
+                        confirmButtonText: 'Aceptar',
+                    });
                     console.error('Error al guardar el doctor:', error);
                 });
-        }
+        },
+        getErrorMessages(errors) {
+            const errorArray = Object.values(errors).flat();
+            return errorArray.join('<br>');
+        },
     },
     created() {
         this.getSpecialities();
