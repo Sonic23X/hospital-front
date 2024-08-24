@@ -70,9 +70,19 @@ export default {
                     });
                 })
                 .catch(error => {
-                    console.error('Error al guardar el paciente:', error);
+                    const errorMessage = this.getErrorMessages(error.response.data.errors) ?? 'Error al guardar el paciente.';
+                    this.$swal.fire({
+                        title: 'Error',
+                        html: errorMessage,
+                        icon: 'error',
+                        confirmButtonText: 'Aceptar',
+                    });
                 });
-        }
+        },
+        getErrorMessages(errors) {
+            const errorArray = Object.values(errors).flat();
+            return errorArray.join('<br>');
+        },
     }
 };
 </script>

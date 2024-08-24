@@ -135,8 +135,19 @@ export default {
                 });
             })
             .catch(error => {
+                const errorMessage = this.getErrorMessages(error.response.data.errors) ?? 'Error al guardar la cita.';
+                this.$swal.fire({
+                    title: 'Error',
+                    html: errorMessage,
+                    icon: 'error',
+                    confirmButtonText: 'Aceptar',
+                });
                 console.error('Error al guardar la cita:', error);
             });
+        },
+        getErrorMessages(errors) {
+            const errorArray = Object.values(errors).flat();
+            return errorArray.join('<br>');
         },
         timeToMinutes(time) {
             const [hours, minutes] = time.split(':').map(Number);

@@ -72,14 +72,29 @@ export default {
           localStorage.setItem('token', response.data.token)
           this.$router.replace('/');
         } else {
-          this.$toast.show('Correo o contraseña invalidos', { theme: 'outline', position: 'top-right', icon: 'times', type: 'error', duration: 2000 });
+          const errorMessage = this.getErrorMessages(response.data.errors) ?? 'Correo o contraseña invalidos.';
+          this.$swal.fire({
+            title: 'Error',
+            html: errorMessage,
+            icon: 'error',
+            confirmButtonText: 'Aceptar',
+          });
         }
       })
       .catch((error) => {
-        this.$toast.show('Ah ocurrido un error, intente más tarde.', { theme: 'outline', position: 'top-right', icon: 'times', type: 'error', duration: 2000 });
+        const errorMessage = this.getErrorMessages(error.response.data.errors) ?? 'Ah ocurrido un error, intente más tarde.';
+        this.$swal.fire({
+          title: 'Error',
+          html: errorMessage,
+          icon: 'error',
+          confirmButtonText: 'Aceptar',
+        });
       });
     },
-
+    getErrorMessages(errors) {
+      const errorArray = Object.values(errors).flat();
+      return errorArray.join('<br>');
+    },
   }
 }
 </script>

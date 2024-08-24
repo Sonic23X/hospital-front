@@ -177,15 +177,27 @@ export default {
                         this.$router.push('/inventary');
                     });
                 } else {
+                    const errorMessage = this.getErrorMessages(response.data.errors) ?? 'Ha ocurrido un error al guardar el producto, por favor intente de nuevo.';
                     this.$swal({
                         title: 'Error',
-                        text: 'Ha ocurrido un error al guardar el producto, por favor intente de nuevo',
+                        html: errorMessage,
                         icon: 'error'
                     });
                 }
             }).catch(error => {
+                const errorMessage = this.getErrorMessages(error.response.data.errors) ?? 'Ha ocurrido un error al guardar el producto, por favor intente de nuevo.';
+                this.$swal.fire({
+                    title: 'Error',
+                    html: errorMessage,
+                    icon: 'error',
+                    confirmButtonText: 'Aceptar',
+                });
                 console.log(error);
             });
+        },
+        getErrorMessages(errors) {
+            const errorArray = Object.values(errors).flat();
+            return errorArray.join('<br>');
         },
         onFileAdd(file) {
             this.files.push(file);
