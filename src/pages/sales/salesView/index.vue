@@ -46,19 +46,20 @@
               <div class="mb-3">
                 <label for="formaPago" class="form-label">Forma de Pago</label>
                 <select class="form-select" id="formaPago" v-model="formaPago">
-                  <option value="efectivo">Efectivo</option>
-                  <option value="tarjeta">Tarjeta</option>
-                  <option value="transferencia">Transferencia</option>
+                  <option value="01">Efectivo</option>
+                  <option value="03">Transferencia</option>
+                  <option value="04">Tarjeta crédito</option>
+                  <option value="28">Tarjeta débito</option>
                 </select>
               </div>
-              <div v-if="formaPago === 'efectivo'" class="mb-3">
+              <div v-if="formaPago === '01'" class="mb-3">
                 <label for="montoRecibido" class="form-label">Monto Recibido</label>
                 <input type="number" class="form-control" id="montoRecibido" v-model.number="montoRecibido" placeholder="Ingrese el monto recibido">
                 <div v-if="cambio >= 0" class="mt-2">
                   <strong>Cambio: </strong>{{ currency(cambio) }}
                 </div>
               </div>
-              <div v-if="formaPago === 'tarjeta'" class="mb-3">
+              <div v-if="formaPago === '04' || formaPago === '28'" class="mb-3">
                 <label for="folioCompra" class="form-label">Folio terminal</label>
                 <input type="text" class="form-control" id="folioCompra" v-model="folioCompra" placeholder="Ingrese el número de tarjeta">
               </div>
@@ -92,7 +93,7 @@
                 productos: [ ],
                 carrito: [ ],
                 codigoBarras: '',
-                formaPago: 'efectivo',
+                formaPago: '01',
                 requiereFactura: false,
                 montoRecibido: 0,
                 folioCompra: '',
@@ -155,7 +156,7 @@
                 this.$refs.codigoBarrasInput.focus();
             },
             async procesarCompra() {
-                if (this.formaPago === 'efectivo' && this.montoRecibido < this.totalCarrito) {
+                if (this.formaPago === '01' && this.montoRecibido < this.totalCarrito) {
                     this.$swal.fire({
                       title: 'Advertencia',
                       text: 'El monto recibido no es suficiente para cubrir el total',

@@ -119,6 +119,12 @@ import detailsHospitalization from "../pages/hospitalization/details/form.vue"
 import indexDoctors from "../pages/doctors/list/index.vue"
 import detailsDoctor from "../pages/doctors/details/form.vue"
 
+import indexInvoicesClient from "../pages/invoices_client/list/index.vue"
+import detailsInvoiceClient from "../pages/invoices_client/details/form.vue"
+
+import indexInvoicesSupplier from "../pages/invoices_supplier/list/index.vue"
+import detailsInvoiceSupplier from "../pages/invoices_supplier/details/form.vue"
+
 
 const routes = [
   {
@@ -801,7 +807,50 @@ const routes = [
       }
     ]
   },
-
+  {
+    path:"/invoices-client",
+    component: BodyView,
+    children:[
+      {
+        path:"",
+        name:"invoicesClientList",
+        component: indexInvoicesClient,
+        meta: {
+          title: 'Hospital - Facturas Cliente',
+        }
+      },
+      {
+        path:"details/:sale_id/:id?",
+        name:"invoicesClientDetails",
+        component: detailsInvoiceClient,
+        meta: {
+          title: 'Hospital - Factura Cliente',
+        }
+      }
+    ]
+  },
+  {
+    path:"/invoices-supplier",
+    component: BodyView,
+    children:[
+      {
+        path:"",
+        name:"invoicesSupplierList",
+        component: indexInvoicesSupplier,
+        meta: {
+          title: 'Hospital - Facturas Proveedores',
+        }
+      },
+      {
+        path:"details/:id?",
+        name:"invoicesSupplierDetails",
+        component: detailsInvoiceSupplier,
+        meta: {
+          title: 'Hospital - Factura Proveedor',
+        }
+      }
+    ]
+  },
   {
      path:"/chart",
      component:BodyView,

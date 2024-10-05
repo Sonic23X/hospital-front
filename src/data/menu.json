@@ -68,6 +68,24 @@
       "type": "link",
       "active": false,
       "path": "/hospitalizations"
+    },
+    {
+      "title": "Facturas",
+      "icon": "dollar-sign",
+      "type": "sub",
+      "active": false,
+      "children": [
+        {
+          "path": "/invoices-client",
+          "title": "Facturas clientes",
+          "type": "link"
+        },
+        {
+          "path": "/invoices-supplier",
+          "title": "Facturas proveedores",
+          "type": "link"
+        }
+      ]
     }
   ]
 }
